@@ -1,0 +1,79 @@
+[
+  {
+    "model": "catalog.bookinstance",
+    "pk": 1,
+    "fields": {
+      "book": 1,
+      "inv_nom": "№1",
+      "imprint": "Журнал «30 дней», 1931",
+      "status": 3,
+      "due_back": "2023-08-10"
+    }
+  },
+  {
+    "model": "catalog.bookinstance",
+    "pk": 2,
+    "fields": {
+      "book": 2,
+      "inv_nom": "№2",
+      "imprint": "АСТ, 2022 г.",
+      "status": 2,
+      "due_back": "2023-08-06"
+    }
+  },
+  {
+    "model": "catalog.bookinstance",
+    "pk": 3,
+    "fields": {
+      "book": 3,
+      "inv_nom": "№3",
+      "imprint": "Русский вестник",
+      "status": 1,
+      "due_back": "2023-08-24"
+    }
+  },
+  {
+    "model": "catalog.bookinstance",
+    "pk": 4,
+    "fields": {
+      "book": 4,
+      "inv_nom": "№4",
+      "imprint": "Эксмо, 2021 г.",
+      "status": 1,
+      "due_back": "2023-08-14"
+    }
+  },
+  {
+    "model": "catalog.bookinstance",
+    "pk": 5,
+    "fields": {
+      "book": 5,
+      "inv_nom": "№5",
+      "imprint": "АСТ, 2022 г",
+      "status": 2,
+      "due_back": null
+    }
+  },
+  {
+    "model": "catalog.bookinstance",
+    "pk": 6,
+    "fields": {
+      "book": 5,
+      "inv_nom": "№6",
+      "imprint": "АСТ, 2022 г",
+      "status": 1,
+      "due_back": null
+    }
+  },
+  {
+    "model": "catalog.bookinstance",
+    "pk": 7,
+    "fields": {
+      "book": 5,
+      "inv_nom": "№7",
+      "imprint": "АСТ, 2022 г",
+      "status": 3,
+      "due_back": null
+    }
+  }
+]

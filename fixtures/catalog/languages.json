@@ -1,0 +1,30 @@
+[
+  {
+    "model": "catalog.language",
+    "pk": 1,
+    "fields": {
+      "name": "Английский"
+    }
+  },
+  {
+    "model": "catalog.language",
+    "pk": 2,
+    "fields": {
+      "name": "Русский"
+    }
+  },
+  {
+    "model": "catalog.language",
+    "pk": 3,
+    "fields": {
+      "name": "Кыргызский"
+    }
+  },
+  {
+    "model": "catalog.language",
+    "pk": 4,
+    "fields": {
+      "name": "Турецкий"
+    }
+  }
+]
