@@ -1,6 +1,7 @@
 from django.db import models
 from django.urls import reverse
 from datetime import date
+from user.models import User
 
 
 class Genre(models.Model):
@@ -78,5 +79,21 @@ class BookInstance(models.Model):
     due_back = models.DateField(null=True, blank=True, help_text="Введите конец срока статуса",
                                 verbose_name="Дата окончания статуса")
 
+    borrower = models.ForeignKey(
+        User,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        verbose_name="Заказчик",
+        help_text='Выберите заказчика из списка'
+    )
+
     def __str__(self):
         return f'{self.inv_nom} {self.book} {self.status}'
+
+    @property
+    def is_overdue(self):
+        if self.due_back and date.today() > self.due_back:
+            return True
+        return False
+

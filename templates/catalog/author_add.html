@@ -1,0 +1,55 @@
+{% extends 'base_generic.html' %}
+{% block content %}
+    <main>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="card shadow-lg border-0 rounded-lg mt-5">
+                        <div class="card-header"><h3 class="text-center font-weight-light my-4">Создать автор</h3>
+                        </div>
+                        <div class="card-body">
+                            <form action="{% url 'catalog:author_add' %}" method="post">
+                                {% csrf_token %}
+                                <div class="form-row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="small mb-1" for="{{ form.first_name.id_for_label }}">
+                                                Имя
+                                            </label>
+                                            {{ form.first_name }}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="small mb-1" for="{{ form.last_name.id_for_label }}">
+                                                Фамилия
+                                            </label>
+                                            {{ form.last_name }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-lg-6">
+                                        <label class="small mb-1" for="{{ form.date_of_birth.id_for_label }}">Дата
+                                            рождения</label>
+                                        {{ form.date_of_birth }}
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label class="small mb-1" for="{{ form.date_of_death.id_for_label }}">Дата
+                                            смерти</label>
+                                        {{ form.date_of_death }}
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group mt-4 mb-0">
+                                        <input class="btn btn-primary btn-block" type="submit" value="Добавить автор">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}

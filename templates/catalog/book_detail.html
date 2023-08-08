@@ -10,6 +10,7 @@
             <a href="{{ author.get_absolute_url }}">{{ author.first_name }} {{ author.last_name }}</a>
         </p>
     {% endfor %}
+    <a href="{% url 'catalog:book_delete' book.id %}">Удалить</a>
     <div style="margin-left:20px;margin-top:20px">
         <h4>Количество экземпляров книг в БД</h4>
         {% for copy in book.book_instances.all %}
@@ -26,3 +27,4 @@
         {% endfor %}
     </div>
 {% endblock %}
+

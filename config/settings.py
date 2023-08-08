@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     # my apps
 
     'catalog',
+    'user',
 ]
 
 MIDDLEWARE = [
@@ -131,6 +132,18 @@ else:
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# email
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
 # sessions
 
 SESSION_SAVE_EVERY_REQUEST = True
+
+# User
+
+AUTH_USER_MODEL = 'user.User'
+LOGIN_URL = '/user/login/'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'

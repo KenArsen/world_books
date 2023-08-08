@@ -5,7 +5,7 @@ from catalog import models
 class BookInstanceInline(admin.TabularInline):
     model = models.BookInstance
     extra = 0
-    fields = ('book', 'inv_nom', 'imprint', 'status', 'due_back')
+    fields = ('book', 'inv_nom', 'imprint', 'status', 'due_back', 'borrower')
 
 
 @admin.register(models.Genre)
@@ -51,10 +51,10 @@ class StatusAdmin(admin.ModelAdmin):
 
 @admin.register(models.BookInstance)
 class BookInstanceAdmin(admin.ModelAdmin):
-    list_display = ('inv_nom', 'book')
+    list_display = ('inv_nom', 'book', 'borrower')
     list_display_links = ('book',)
     list_filter = ('book', 'status')
     fieldsets = (
         ('Экземпляр книги', {'fields': ('book', 'imprint', 'inv_nom')}),
-        ('Статус и окончание его действия', {'fields': ('status', 'due_back')}),
+        ('Статус и окончание его действия', {'fields': ('status', 'due_back', 'borrower')}),
     )
