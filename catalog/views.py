@@ -1,12 +1,12 @@
-from django.shortcuts import render
-from catalog import models
-from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
-from catalog.forms import AuthorAddForm, AuthorDetailForm
 from django.contrib.messages.views import SuccessMessageMixin
+from django.shortcuts import redirect, render
+from django.urls import reverse_lazy
+from django.views.generic import DetailView, ListView
 from django.views.generic.edit import CreateView, UpdateView
-from django.views.generic import ListView, DetailView
-from django.shortcuts import redirect
+
+from catalog import models
+from catalog.forms import AuthorAddForm, AuthorDetailForm
 
 
 # Book

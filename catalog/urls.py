@@ -1,4 +1,5 @@
-from django.urls import path, re_path, include
+from django.urls import include, path, re_path
+
 from catalog import views
 
 app_name = 'catalog'
